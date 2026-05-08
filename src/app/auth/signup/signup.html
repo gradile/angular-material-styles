@@ -1,0 +1,10 @@
+<section class="signup-form">
+  <form fxLayout="column" fxLayoutAlign="center center" #f="ngForm">
+    <mat-form-field>
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="emailFormControl" (blur)="updateErrorMessage()" required />
+      <mat-error *ngIf="emailFormControl.invalid">{{ updateErrorMessage() }}</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+</section>
